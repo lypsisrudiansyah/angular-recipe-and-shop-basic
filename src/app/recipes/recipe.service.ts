@@ -52,7 +52,6 @@ export class RecipeService {
     constructor(private slService: ShoppingListService) {}
 
     setRecipes(recipes: Recipe[]) {
-        //Ask Bang Kamel
         this.recipes = recipes;
         this.recipesChanged.next(this.recipes.slice());
     }
