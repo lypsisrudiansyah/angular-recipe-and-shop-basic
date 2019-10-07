@@ -112,10 +112,16 @@ export class AuthService {
               errorMessage = 'This Email Already Exists';
               break;
               case 'EMAIL_NOT_FOUND':
-              errorMessage = 'This Email does not exists.';
+              errorMessage = 'This Account Doesn\'t exists ';
               break;
               case 'INVALID_PASSWORD':
               errorMessage = 'This password not correct';
+              break;
+              case 'INVALID_EMAIL':
+              errorMessage = 'This Email not Correct, Please Check Again';
+              break;
+              case 'TOO_MANY_ATTEMPTS_TRY_LATER':
+              errorMessage = 'Too Many Attemps, You Have Try again Later';
               break;
             }
             return throwError(errorMessage);
